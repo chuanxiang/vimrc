@@ -92,6 +92,8 @@ Plugin 'will133/vim-dirdiff'
 
 Plugin 'tpope/vim-cucumber'
 
+Plugin 'rhysd/vim-clang-format'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -224,7 +226,7 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " command! -nargs=? Filter let @z='' | execute 'g/<args>/y Z' | vnew | setlocal bt=nofile | put! z
 " command! -nargs=? FilterH let @z='' | execute 'g/<args>/y Z' | new | setlocal bt=nofile | put! z
-" command! -nargs=? ListErrors let @z='' | execute 'g/ERROR-\|^\s*\d\./y Z' | vnew | setlocal bt=nofile | put! z
+command! -nargs=? ListErrors let @z='' | execute 'g/ERROR-\|^\s*\d\./y Z' | vnew | setlocal bt=nofile | put! z
 
 " nnoremap <silent> <S-Tab> :TlistToggle<cr>:SrcExplToggle<cr>
 " Config TagList {{{
